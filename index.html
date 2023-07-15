@@ -7,8 +7,6 @@
     <title>My Gallary Master</title>
     <style>
         .body-section {
-            width: 1440px;
-            height: 1577px;
             border-radius: 24px;
             background: #FFF;
         }
@@ -61,29 +59,43 @@
             font-size: 18px;
             font-weight: 600;
         }
-
-        .gallary-items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 200px) 50px 50px;
-            gap: 24px;
+        .item1{
+            grid-area: item1;
         }
-
-        .gallary-items div {
+        .item2{
+            grid-area: item2;
+        }
+        .item3{
+            grid-area: item3;
+            
+        }
+        .item4{
+            grid-area: item4;
+        }
+        .item5{
+            grid-area: item5;
+        }
+        .item6{
+            grid-area: item6;
+        }
+        .gallary-items{
+            padding: 30px 200px;
+            display: grid;
+            gap: 30px;
+            grid-template-areas: 
+            "item1  item2   item2"
+            "item3  item3   item4"
+            "item5  item6   item4"            
+            ;
+        }
+        .gallary-items div > img{
+            border-radius: 12px;
+        }
+        .gallary-items div > img{
             width: 100%;
             height: 100%;
         }
 
-        .item2 {
-            grid-column: span 2;
-            flex-wrap: wrap;
-        }
-        .item3{
-            grid-column: span 2;
-        }
-        .item4{
-            grid-row: span 2;
-        }
     </style>
 </head>
 
